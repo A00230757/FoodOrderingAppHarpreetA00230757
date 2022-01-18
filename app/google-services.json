@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "213766614957",
+    "project_id": "foodorderingappharpreet",
+    "storage_bucket": "foodorderingappharpreet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213766614957:android:ca8dfe052635a64174bb24",
+        "android_client_info": {
+          "package_name": "ca.harpreetA00230757.foodorderingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "213766614957-s6lkcds640qrmmvdidc3f5os02ho3qfu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLrCySerrhd_ZePD5JTFhO-uoP8VTyjlI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "213766614957-s6lkcds640qrmmvdidc3f5os02ho3qfu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
