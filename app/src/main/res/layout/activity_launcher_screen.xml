@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LauncherScreen"
+    android:orientation="vertical"
+    android:background="@drawable/splashimage">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADMIN AND KITCHEN "
+        android:textStyle="bold"
+        android:layout_marginTop="200dp"
+        android:textSize="50sp"
+        android:gravity="center"
+        android:textColor="#F6EFEF"/>
+
+</LinearLayout>
