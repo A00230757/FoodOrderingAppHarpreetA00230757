@@ -9,6 +9,7 @@ import androidx.appcompat.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -181,6 +182,7 @@ public class ManageCategory extends AppCompatActivity
                     //Setting the title manually
                     alert.setTitle("Delete");
                     alert.show();
+                    Log.d("MYMSG","");
 
 
                 }

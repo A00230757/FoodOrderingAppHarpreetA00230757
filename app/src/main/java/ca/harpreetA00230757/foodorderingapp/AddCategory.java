@@ -21,6 +21,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -296,6 +297,7 @@ public class AddCategory extends AppCompatActivity
             {
                 // Toast.makeText(this,"Permissions Not Granted",Toast.LENGTH_LONG).show();
                 requestPermission();
+                Log.d("MYMSG","");
             }
         }
     }
