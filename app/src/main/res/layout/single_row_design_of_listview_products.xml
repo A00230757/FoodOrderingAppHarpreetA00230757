@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_weight="1.5"
+                android:id="@+id/imv111"
+                android:layout_width="0dp"
+                android:layout_height="147dp"
+                android:layout_margin="10dp" />
+
+            <ImageView
+                android:id="@+id/imv_edit"
+                android:layout_margin="10dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.32"
+                android:src="@drawable/editicon" />
+            <ImageView
+                android:id="@+id/imv_veg"
+                android:layout_margin="10dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.30"
+                android:src="@drawable/vegicon" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv111"
+            android:textSize="21sp"
+            android:layout_marginVertical="3dp"
+            android:textColor="#000000"
+            android:layout_marginLeft="23dp"
+            android:text="PRODUCT NAME"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv222"
+            android:textSize="18sp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="5dp"
+            android:text="PRODUCT DESCRIPTION"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv333"
+            android:textSize="21sp"
+            android:textColor="#000000"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="5dp"
+            android:text="PRODUCT PRICE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
