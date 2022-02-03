@@ -220,7 +220,7 @@ public class AddProduct extends AppCompatActivity
 
     public void submit(View v)
     {
-        progressDialog = GlobalClass.CreateProgressDialog(this,"Adding Food Item","Please Wait!!");
+        progressDialog = ProgressDialogClass.CreateProgressDialog(this,"Adding Food Item","Please Wait!!");
         progressDialog.show();
         String product_name = et_productname.getText().toString();
         String product_desc = et_productdesc.getText().toString();

@@ -139,7 +139,7 @@ public class AddCategory extends AppCompatActivity
 
     public void submit(View v)
     {
-        progressDialog = GlobalClass.CreateProgressDialog(this,"Adding Category","Please Wait......");
+        progressDialog = ProgressDialogClass.CreateProgressDialog(this,"Adding Category","Please Wait......");
         progressDialog.show();
         String  category_name = et_categoryname.getText().toString();
         String  category_desc = et_categorydesc.getText().toString();

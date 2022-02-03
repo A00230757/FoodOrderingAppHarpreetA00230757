@@ -205,15 +205,15 @@ public class ManageProducts extends AppCompatActivity
                 @Override
                 public void onClick(View view) {
 
-                    Intent intent=new Intent(getApplicationContext(), EditFoodItem.class);
-                    intent.putExtra("catname",category_name);
-                    intent.putExtra("fooditemname",obj.getItem_name());
-                    intent.putExtra("fooditemdesc",obj.getItem_desc());
-                    intent.putExtra("fooditemprice",obj.getItem_price());
-                    intent.putExtra("fooditemtype",obj.getItem_type());
-                    intent.putExtra("fooditemphoto",obj.getPhoto());
-
-                    startActivity(intent);
+//                    Intent intent=new Intent(getApplicationContext(), EditFoodItem.class);
+//                    intent.putExtra("catname",category_name);
+//                    intent.putExtra("fooditemname",obj.getItem_name());
+//                    intent.putExtra("fooditemdesc",obj.getItem_desc());
+//                    intent.putExtra("fooditemprice",obj.getItem_price());
+//                    intent.putExtra("fooditemtype",obj.getItem_type());
+//                    intent.putExtra("fooditemphoto",obj.getPhoto());
+//
+//                    startActivity(intent);
                 }
 
             });

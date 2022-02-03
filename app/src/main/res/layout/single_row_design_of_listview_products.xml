@@ -16,7 +16,7 @@
             android:layout_height="175dp"
             android:layout_margin="10dp"
             android:orientation="horizontal">
-
+`
             <ImageView
                 android:layout_weight="1.5"
                 android:id="@+id/imv111"
