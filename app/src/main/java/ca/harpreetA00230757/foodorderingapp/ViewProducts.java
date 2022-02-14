@@ -200,7 +200,7 @@ public class ViewProducts extends AppCompatActivity {
             {
                 int qty1 = ProgressDialogClass.orderedItems.get(index).getItem_qty()+qty;
                 ProgressDialogClass.orderedItems.get(index).setItem_qty(qty1);
-                ProgressDialogClass.orderedItems.get(index).setTotalprice(ProgressDialogClass.orderedItems.get(index).getItem_price() * GlobalClass.orderedItems.get(index).getItem_qty() );
+                ProgressDialogClass.orderedItems.get(index).setTotalprice(ProgressDialogClass.orderedItems.get(index).getItem_price() * ProgressDialogClass.orderedItems.get(index).getItem_qty() );
             }
             else
             {

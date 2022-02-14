@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartDetails"
+    android:orientation="vertical"
+    android:background="@drawable/image3">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/cart_toolbar"
+        app:titleTextColor="#000000"
+        app:titleMarginStart="50dp"
+        app:title="Food Order Cart"
+        android:textAlignment="center"
+        android:background="#DFDCDC"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/imv_cart"
+            android:layout_marginLeft="100dp"
+            android:src="@drawable/shopping_cart_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tv_cartheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:layout_margin="20dp"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:text="CART DETAILS"/>
+
+    <ListView
+        android:id="@+id/lv_cart_items"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="10dp">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:textStyle="bold"
+                android:text="Total Amount"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="600"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_foodcarttotalamount"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:weightSum="2">
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:textStyle="bold"
+                android:text="GST@ 5%"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="50"
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_foodcartgst"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:weightSum="2">
+
+            <TextView
+                android:textSize="20sp"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:textStyle="bold"
+                android:text="Amount payable"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="650"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_foodcartamountpayable"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <Button
+            android:textSize="30dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Make Payment"
+            android:layout_marginTop="10dp"
+            android:id="@+id/bt_makepayment"/>
+
+    </LinearLayout>
+
+</LinearLayout>

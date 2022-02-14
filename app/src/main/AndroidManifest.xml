@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodOrderingAppHarpreetA00230757">
-        <activity android:name=".ViewProducts"></activity>
+        <activity android:name=".CartDetails"></activity>
+        <activity android:name=".ViewProducts" />
         <activity android:name=".ViewAllCategories" />
         <activity android:name=".SignUp1" />
         <activity android:name=".SignUp" />
