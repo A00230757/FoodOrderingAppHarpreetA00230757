@@ -14,7 +14,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodOrderingAppHarpreetA00230757">
-        <activity android:name=".CartDetails"></activity>
+        <activity android:name=".KitchenHome2"></activity>
+        <activity android:name=".KitchenHome" />
+
+        <service
+            android:name=".GetToken"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".CartDetails" />
         <activity android:name=".ViewProducts" />
         <activity android:name=".ViewAllCategories" />
         <activity android:name=".SignUp1" />
@@ -38,6 +58,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_dRWiKHS7zr2Gki" />
     </application>
 
 </manifest>

@@ -25,4 +25,9 @@ public class MainActivity extends AppCompatActivity
         Intent in = new Intent(this,ManageProducts.class);
         startActivity(in);
     }
+    public void shop(View v)
+    {
+        Intent in = new Intent(this,ViewAllCategories.class);
+        startActivity(in);
+    }
 }
