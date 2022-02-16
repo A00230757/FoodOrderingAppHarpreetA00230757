@@ -14,7 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodOrderingAppHarpreetA00230757">
-        <activity android:name=".KitchenHome2"></activity>
+        <activity android:name=".FetchCurrentOrdersUser"></activity>
+        <activity android:name=".FetchAllOrdersUser" />
+        <activity android:name=".ViewActiveOrdersUser" />
+        <activity android:name=".ViewAllOrdersUser" />
+        <activity android:name=".ViewOrders" />
+        <activity android:name=".FetchUserAllOrders" />
+        <activity android:name=".KitchenHome2" />
         <activity android:name=".KitchenHome" />
 
         <service
