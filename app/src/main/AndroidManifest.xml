@@ -14,7 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodOrderingAppHarpreetA00230757">
-        <activity android:name=".FetchCurrentOrdersUser"></activity>
+        <activity android:name=".View_CustomerReviews"></activity>
+        <activity android:name=".RateAndReview" />
+        <activity android:name=".RatingClass" />
+        <activity android:name=".FetchCurrentOrdersUser" />
         <activity android:name=".FetchAllOrdersUser" />
         <activity android:name=".ViewActiveOrdersUser" />
         <activity android:name=".ViewAllOrdersUser" />
