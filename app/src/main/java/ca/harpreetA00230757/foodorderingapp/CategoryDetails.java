@@ -1,6 +1,6 @@
 package ca.harpreetA00230757.foodorderingapp;
 
-
+//
 public class CategoryDetails
 {
     private String category_name;

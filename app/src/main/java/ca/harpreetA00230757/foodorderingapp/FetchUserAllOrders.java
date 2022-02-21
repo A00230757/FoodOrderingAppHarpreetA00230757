@@ -1,5 +1,5 @@
 package ca.harpreetA00230757.foodorderingapp;
-
+//
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
