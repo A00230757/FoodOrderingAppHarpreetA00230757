@@ -27,8 +27,12 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+
+// admin can view customer views using this activity
 public class View_CustomerReviews extends AppCompatActivity
 {
+
+    //declarations for list view to show reviews , firebase databse and storage
     ListView lv_reviews;
     ArrayList<RatingClass> al_rating;
     FirebaseDatabase firebaseDatabase;
@@ -41,6 +45,8 @@ public class View_CustomerReviews extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view__customer_reviews);
 
+
+        // to give memory to reviews list , adapter , firebase databse and storage
         lv_reviews = findViewById(R.id.lv_reviews);
         myad = new myadapter();
         al_rating = new ArrayList<>();
@@ -80,7 +86,7 @@ public class View_CustomerReviews extends AppCompatActivity
         // myad.notifyDataSetChanged();
     }
 
-    ////////Adapter code/////
+    ////////Adapter code to set individual ratings by user to list view/////
     class myadapter extends BaseAdapter
     {
 

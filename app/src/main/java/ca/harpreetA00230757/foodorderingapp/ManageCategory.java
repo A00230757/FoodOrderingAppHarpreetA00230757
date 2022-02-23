@@ -32,6 +32,9 @@ import java.util.ArrayList;
 
 public class ManageCategory extends AppCompatActivity
 {
+
+    //declaration of reference for firebase database ,
+    // storage, array list of categories and customlist view to show categories.
     FirebaseDatabase firebaseDatabase;
     DatabaseReference mainref;
 
@@ -45,6 +48,7 @@ public class ManageCategory extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        //giving memory to arraylist , firbase database , firebase storage
         setContentView(R.layout.activity_manage_category);
 
         al = new ArrayList<>();
@@ -57,6 +61,8 @@ public class ManageCategory extends AppCompatActivity
         firebaseDatabase = FirebaseDatabase.getInstance();
         mainref = firebaseDatabase.getReference("category");
 
+
+        // to load all categories from cloud to array list
         mainref.addValueEventListener(new ValueEventListener()
         {
             @Override
@@ -90,6 +96,8 @@ public class ManageCategory extends AppCompatActivity
         });
         builder = new AlertDialog.Builder(this);
         builder.setMessage("Dialog msg") .setTitle("R.string.dialog_title");
+
+
         fab.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -109,7 +117,7 @@ public class ManageCategory extends AppCompatActivity
 
 
 
-    ////////Adapter code/////
+    ////////Adapter code///////
     class myadapter extends BaseAdapter
     {
 

@@ -25,7 +25,12 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+
+//while shopping when user select category then this activty get that category name
+//from intent and show food items of that particular activity
 public class ViewProducts extends AppCompatActivity {
+
+    // declarations to firabase database, storage , food items list .
     FirebaseDatabase firebaseDatabase;
     DatabaseReference fooditem_ref;
 
@@ -40,12 +45,15 @@ public class ViewProducts extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_products);
 
+        // memory to firabase database, storage , food items list .
         al = new ArrayList<>();
         myad = new myadapter();
         lv_products = findViewById(R.id.lv_products);
         bt_makepayment = findViewById(R.id.bt_makepayment);
         lv_products.setAdapter(myad);
 
+
+        //to get category name from previous activty
         Intent incomingintent = getIntent();
         String category = incomingintent.getStringExtra("category");
 
@@ -53,6 +61,8 @@ public class ViewProducts extends AppCompatActivity {
         fooditem_ref = firebaseDatabase.getReference("category");
         Toast.makeText(this,category+"",Toast.LENGTH_SHORT).show();
 
+
+        // load food items of that particular activity
         fooditem_ref.child(category).child("food item").addValueEventListener(new ValueEventListener()
         {
             @Override
@@ -98,7 +108,7 @@ public class ViewProducts extends AppCompatActivity {
 
     }
 
-    ////////Adapter code/////
+    ////////Adapter code to link food items data to list/////
     class myadapter extends BaseAdapter {
 
         @Override
@@ -168,6 +178,8 @@ public class ViewProducts extends AppCompatActivity {
 
         }
     }
+
+    // to add food item to cart when user select any
     public void manage_cart(FoodItemDetails obj)
     {
         //OrderedItems obj1 = new OrderedItems(obj.getItem_name(),obj.getItem_desc(),obj.getItem_type(),obj.getPhoto(),1,obj.getItem_price(),(obj.getItem_price()));

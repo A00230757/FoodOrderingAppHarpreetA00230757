@@ -1,5 +1,5 @@
 package ca.harpreetA00230757.foodorderingapp;
-//
+
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -44,7 +44,12 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+// after login kitchen view this screen where can handle its different duties.
+// such as view orders / process orders
+
+
 public class KitchenHome2 extends AppCompatActivity {
+    //running orders list view , firebase databse and storage declarations
     RecyclerView rcv_runningorders;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference customerOrders;
@@ -54,6 +59,8 @@ public class KitchenHome2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kitchen_home2);
+
+        //giving running orders list view , firebase database and storage memory
         rcv_runningorders = findViewById(R.id.rcv_runningorders);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         gridLayoutManager.setOrientation(LinearLayoutManager.VERTICAL); // set Horizontal Orientation
@@ -67,6 +74,8 @@ public class KitchenHome2 extends AppCompatActivity {
 
         LoadData();
     }
+
+    //loading orders which are not delivered
     private void LoadData() {
         Toast.makeText(this, "load data called", Toast.LENGTH_SHORT).show();
         Log.d("ok", "load data");
@@ -89,6 +98,8 @@ public class KitchenHome2 extends AppCompatActivity {
                     }
                 });
 
+
+        //print kitchen order ticket of new order
         firebaseDatabase.getReference().child("orders").orderByChild("deliverydate").equalTo(0).addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
@@ -120,6 +131,7 @@ public class KitchenHome2 extends AppCompatActivity {
 
     }
 
+    //kot print format
     private String spaces(String str, int num) {
         String spaces = "";
         Log.d("Print", num - str.length() + "");
@@ -134,7 +146,7 @@ public class KitchenHome2 extends AppCompatActivity {
         return spaces;
     }
 
-
+//this function will print kot finally
     private void printkot(CustomerOrder obj)
     {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:MM");

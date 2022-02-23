@@ -40,8 +40,12 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+
+// after login kitchen view this screen where can handle its different duties.
+// such as view orders / process orders
 public class KitchenHome extends AppCompatActivity
 {
+    //running orders list view , firebase databse and storage declarations
     ArrayList<CustomerOrder> al_customerorders = new ArrayList<>();
     FirebaseDatabase firebaseDatabase;
     DatabaseReference kitchen_ref,token_ref;
@@ -53,6 +57,7 @@ public class KitchenHome extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kitchen_home);
 
+        //giving running orders list view , firebase database and storage memory
         gridview_kitchen = findViewById(R.id.gridview_kitchen);
         firebaseDatabase = FirebaseDatabase.getInstance();
         kitchen_ref = firebaseDatabase.getReference("Orders");

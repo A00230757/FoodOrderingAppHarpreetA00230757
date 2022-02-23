@@ -22,8 +22,11 @@ import com.google.firebase.database.ValueEventListener;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+//to submit rating and review of ordered food item
 public class RateAndReview extends AppCompatActivity
 {
+
+    //declarations of rating bar , buttons  , firebase databse , storage
     RatingBar rating_bar;
     Button bt_submitreview;
     EditText et_review;
@@ -40,6 +43,8 @@ public class RateAndReview extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rate_and_review);
+
+        //giving memory to rating bar , buttons  , firebase databse , storage
         rating_bar = findViewById(R.id.rating_bar);
         bt_submitreview = findViewById(R.id.bt_submitreview);
         et_review = findViewById(R.id.et_review);
@@ -70,6 +75,8 @@ public class RateAndReview extends AppCompatActivity
 //        });
 
     }
+
+    // to submit rating
     public void  submitReview(View v)
     {
         rating = (int) rating_bar.getRating();

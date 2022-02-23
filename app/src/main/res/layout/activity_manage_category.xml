@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".ManageCategory">
 
-
+    <!-- floating actiona button to add new category- -->
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -28,7 +28,7 @@
 
         android:orientation="vertical"
         android:background="#D8D1E6">
-
+        <!-- -different textview, edit text or labels for category data -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
             android:textSize="35sp"
             android:text="CATEGORIES"/>
 
-
+        <!-- - list view to show all categories-->
 
         <ListView
             android:id="@+id/lv_category"

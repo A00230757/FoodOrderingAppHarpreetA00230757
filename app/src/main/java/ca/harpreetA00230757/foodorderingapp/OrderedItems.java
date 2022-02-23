@@ -1,6 +1,6 @@
 package ca.harpreetA00230757.foodorderingapp;
 
-
+//this class has data members and member functions and getter setter for ordered items
 public class OrderedItems
 {
     private String item_name,item_desc,item_type,item_photo;

@@ -1,6 +1,6 @@
 package ca.harpreetA00230757.foodorderingapp;
 
-
+// this class has all data members , member functions for user along with getter setter.
 public class UserDetails
 {
     private String mobileno;

@@ -5,6 +5,8 @@ import android.content.Context;
 
 import java.util.ArrayList;
 
+
+// to store cart ordereditems list separately and create progress dialog
 public class ProgressDialogClass {
     public static ArrayList<OrderedItems> orderedItems = new ArrayList<>();
     public static ArrayList<OrderedItems> selected_orderedItems = new ArrayList<>();

@@ -27,11 +27,15 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+
+//this activity is used to manage already added food items
 public class ManageProducts extends AppCompatActivity
 {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference fooditem_ref;
 
+
+    //declaration of fooditem details array list , categorydetails array list , firebase database and memory
     ArrayList<FoodItemDetails> al;
     ArrayList<CategoryDetails> al_category;
     myadapter myad;
@@ -46,7 +50,7 @@ public class ManageProducts extends AppCompatActivity
         setContentView(R.layout.activity_manage_products);
 
 
-
+//giving memory to fooditem details array list , categorydetails array list , firebase database and memory
         al = new ArrayList<>();
         myad = new myadapter();
         fab = findViewById(R.id.fab);
@@ -62,6 +66,8 @@ public class ManageProducts extends AppCompatActivity
         spinner_category = findViewById(R.id.spiner_category);
         spinner_category.setAdapter(ad_category);
 
+
+        // to load all categories to array list
         fooditem_ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -81,6 +87,7 @@ public class ManageProducts extends AppCompatActivity
             }
         });
 
+        // to show food items based on selected category
         spinner_category.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -112,6 +119,8 @@ public class ManageProducts extends AppCompatActivity
         startActivity(in);
     }
 
+
+    // to add and show food items in food items list
     public void viewProducts(String categoryname)
     {
 
@@ -223,7 +232,7 @@ public class ManageProducts extends AppCompatActivity
         }
     }
 
-    // Inner class
+    // Inner class  for spinner
     class myadapter_category extends BaseAdapter
     {
 

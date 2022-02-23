@@ -48,6 +48,9 @@ import java.util.ArrayList;
 
 public class AddProduct extends AppCompatActivity
 {
+
+    //reference to different controls and firebase databbse with storage.
+    //spinner view used to select category and then add food items.
     EditText et_productname,et_productdesc,et_productprice;
     ImageView imv_product;
     Spinner spinner_category;
@@ -75,6 +78,7 @@ public class AddProduct extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_product);
 
+        //memory to different controls
         et_productname = findViewById(R.id.et_productname);
         et_productdesc = findViewById(R.id.et_productdesc);
         et_productprice = findViewById(R.id.et_productprice);
@@ -102,6 +106,8 @@ public class AddProduct extends AppCompatActivity
         firebaseDatabase = FirebaseDatabase.getInstance();
         fooditem_ref = firebaseDatabase.getReference("category");
 
+
+        //radio button for veg not veg
         radiobt_veg.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
         {
             @Override
@@ -125,6 +131,7 @@ public class AddProduct extends AppCompatActivity
             }
         });
 
+        //selection listener to select list
         fooditem_ref.addListenerForSingleValueEvent(new ValueEventListener()
         {
             @Override
@@ -145,6 +152,7 @@ public class AddProduct extends AppCompatActivity
             }
         });
 
+        //selection listener to spinner
         spinner_category.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {
             @Override
@@ -161,12 +169,14 @@ public class AddProduct extends AppCompatActivity
         });
     }
 
+    //browse image from camera
     public void fromCamera(View v)
     {
         imv_product.setVisibility(View.VISIBLE);
         Intent in = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(in,100);
     }
+    //browse image from gallery
     public void fromGallery(View v)
     {
         imv_product.setVisibility(View.VISIBLE);
@@ -175,6 +185,8 @@ public class AddProduct extends AppCompatActivity
         startActivityForResult(in,101);
     }
 
+
+    //function for image returned from camera or gallery
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent backdata)
     {
@@ -218,6 +230,7 @@ public class AddProduct extends AppCompatActivity
         }
     }
 
+    //upload food items data to cloud
     public void submit(View v)
     {
         progressDialog = ProgressDialogClass.CreateProgressDialog(this,"Adding Food Item","Please Wait!!");
@@ -353,6 +366,8 @@ public class AddProduct extends AppCompatActivity
         }
 
     }
+
+    //function name suggest ita purpose
     public String getRealPathFromURI(Uri contentUri)
     {
         String[] proj = {MediaStore.Audio.Media.DATA};
@@ -362,7 +377,7 @@ public class AddProduct extends AppCompatActivity
         return cursor.getString(column_index);
     }
 
-
+//function name suggest its purpose
     public Uri getImageUri(Context inContext, Bitmap inImage)
     {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
@@ -374,6 +389,7 @@ public class AddProduct extends AppCompatActivity
 
 
     // Inner class
+    //custom adapter to show already added products
     class myadapter extends BaseAdapter
     {
 

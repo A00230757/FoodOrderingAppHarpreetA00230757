@@ -24,7 +24,14 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+
+//when user start shopping then this activity appears first to show all cuisines/categories
+
+// when user choose any category then food items corresponding to that particular category get visible in second activity
+
 public class ViewAllCategories extends AppCompatActivity {
+
+    //declarations to firebase database , storage and grid list of category
     GridView gridView_category;
 
     FirebaseDatabase firebaseDatabase;
@@ -38,6 +45,8 @@ public class ViewAllCategories extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_all_categories);
+
+        //memory to firebase database , storage and grid list of category
         gridView_category = findViewById(R.id.gridView_category);
 
         al = new ArrayList<>();
@@ -47,6 +56,8 @@ public class ViewAllCategories extends AppCompatActivity {
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         mainref = firebaseDatabase.getReference("category");
+
+        //load categories from  firebase and add to list
         mainref.addValueEventListener(new ValueEventListener()
         {
             @Override
@@ -78,7 +89,7 @@ public class ViewAllCategories extends AppCompatActivity {
 
     }
 
-    ////////Adapter code/////
+    ////////Adapter code to set firebase category data to grid list/////
     class myadapter extends BaseAdapter {
 
         @Override

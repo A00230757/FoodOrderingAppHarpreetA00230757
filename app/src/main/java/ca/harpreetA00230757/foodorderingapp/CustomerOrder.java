@@ -1,6 +1,6 @@
 package ca.harpreetA00230757.foodorderingapp;
 
-//
+//class where customer order data members and member functions and getter setter declared
 
 import java.util.ArrayList;
 

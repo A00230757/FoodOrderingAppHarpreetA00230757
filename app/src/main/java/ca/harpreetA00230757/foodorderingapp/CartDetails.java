@@ -38,10 +38,14 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+
+//this activity shows already added food itemd in cart
 public class CartDetails extends AppCompatActivity implements PaymentResultListener
 {
     //    ArrayList<FoodItemDetails> al;
 //    ArrayList<CartDetails> al_cart;
+
+    //declarations for cart itemslist view , firabse databse , storage
     ListView lv_cartItems;
     TextView tv_foodcarttotalamount;
     TextView tv_foodcartgst;
@@ -49,6 +53,7 @@ public class CartDetails extends AppCompatActivity implements PaymentResultListe
     myadapter myad;
     AlertDialog.Builder builder;
 
+    //declarations for total amount , gst , sub amount variables
     int sub_amount = 0;
     double gst = 0.0;
     double total_amount = 0.0;
@@ -65,6 +70,8 @@ public class CartDetails extends AppCompatActivity implements PaymentResultListe
         lv_cartItems = findViewById(R.id.lv_cart_items);
 //        al_cart = new ArrayList<>();
 
+
+        //giving memory to different variables and list
         tv_foodcarttotalamount = findViewById(R.id.tv_foodcarttotalamount);
         tv_foodcartgst = findViewById(R.id.tv_foodcartgst);
         tv_foodcartamountpayable = findViewById(R.id.tv_foodcartamountpayable);
@@ -102,6 +109,8 @@ public class CartDetails extends AppCompatActivity implements PaymentResultListe
     }
 
     long orderno;
+
+    //this function store order in database after successfull payment
     @Override
     public void onPaymentSuccess(String s)
     {
@@ -288,6 +297,8 @@ public class CartDetails extends AppCompatActivity implements PaymentResultListe
 
             });*/
 
+
+            // to delete any item from cart
             imv_cancelfrom_cart.setOnClickListener(new View.OnClickListener()
             {
 
@@ -336,6 +347,7 @@ public class CartDetails extends AppCompatActivity implements PaymentResultListe
     }
 
 
+    // to start payment
     public void startPayment() {
         /*
           You need to pass current activity in order to let Razorpay create CheckoutActivity
@@ -366,6 +378,8 @@ public class CartDetails extends AppCompatActivity implements PaymentResultListe
             e.printStackTrace();
         }
     }
+
+    // to add more item in manage cart
     public void addToManagecart(int index)
     {
         int qty1 = ProgressDialogClass.orderedItems.get(index).getItem_qty()+1;
@@ -378,6 +392,8 @@ public class CartDetails extends AppCompatActivity implements PaymentResultListe
 
 
     }
+
+    // to delete item from manage cart
     public void deleteFromManageCart(int index)
     {
         if(ProgressDialogClass.orderedItems.get(index).getItem_qty()<1){
@@ -395,6 +411,8 @@ public class CartDetails extends AppCompatActivity implements PaymentResultListe
 
     }
 
+
+    // to calculate amount
     public  void calculateAmount()
     {
         int sub_amount = 0;
@@ -407,6 +425,8 @@ public class CartDetails extends AppCompatActivity implements PaymentResultListe
         tv_foodcarttotalamount.setText(sub_amount+"");
         calculateGst(sub_amount);
     }
+
+    // to calculate tax
     public void calculateGst(int subamount)
     {
         double part = 5.0;
@@ -415,6 +435,8 @@ public class CartDetails extends AppCompatActivity implements PaymentResultListe
         tv_foodcartgst.setText(gst+"");
         calculateAmountPayable(subamount,gst);
     }
+
+    // to calculate payaable amount
     public void calculateAmountPayable(int subamount,double gst)
     {
         total_amount = subamount + gst;

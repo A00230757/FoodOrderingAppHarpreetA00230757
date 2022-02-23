@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+
+//this is splash screen where thread hold it for 3 seconds and after tgat MainActivity appears
 public class LauncherScreen extends AppCompatActivity {
 
     @Override

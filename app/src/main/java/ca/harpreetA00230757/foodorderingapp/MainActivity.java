@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+
+//here admin or user can open there login screens
 public class MainActivity extends AppCompatActivity
 {
 
@@ -28,6 +30,27 @@ public class MainActivity extends AppCompatActivity
     public void shop(View v)
     {
         Intent in = new Intent(this,ViewAllCategories.class);
+        startActivity(in);
+    }
+    public void viewadminorders(View v)
+    {
+        Intent in = new Intent(this,FetchUserAllOrders.class);
+        startActivity(in);
+    }
+
+    public void viewuserorders(View v)
+    {
+        Intent in = new Intent(this,FetchAllOrdersUser.class);
+        startActivity(in);
+    }
+    public void viewcustomerreviews(View v)
+    {
+        Intent in = new Intent(this,View_CustomerReviews.class);
+        startActivity(in);
+    }
+    public void viewdailysale(View v)
+    {
+        Intent in = new Intent(this,ViewDailySale.class);
         startActivity(in);
     }
 }

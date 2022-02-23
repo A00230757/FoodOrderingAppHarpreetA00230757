@@ -1,6 +1,8 @@
 package ca.harpreetA00230757.foodorderingapp;
 //
 
+
+//all data members and member functions with getter setter are present in this class
 public class RatingClass
 {
     private long orderno;

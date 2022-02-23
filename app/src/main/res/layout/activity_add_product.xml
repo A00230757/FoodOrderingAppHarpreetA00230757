@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/lightbackground">
-
+    <!-- -different textview, edit text or labels for food items data -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

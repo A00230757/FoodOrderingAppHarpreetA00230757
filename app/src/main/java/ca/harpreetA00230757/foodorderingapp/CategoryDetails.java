@@ -1,6 +1,7 @@
 package ca.harpreetA00230757.foodorderingapp;
 
-//
+//class where category data members and member functions declared
+
 public class CategoryDetails
 {
     private String category_name;

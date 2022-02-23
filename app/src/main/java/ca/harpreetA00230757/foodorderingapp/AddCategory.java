@@ -80,12 +80,15 @@ public class AddCategory extends AppCompatActivity
         startPermission();
     }
 
+    //this function is used to browse image from camera
     public void fromCamera(View v)
     {
         imv_category.setVisibility(View.VISIBLE);
         Intent in = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(in,100);
     }
+
+    //this function is used to browse image from gallery
     public void fromGallery(View v)
     {
         imv_category.setVisibility(View.VISIBLE);
@@ -94,11 +97,13 @@ public class AddCategory extends AppCompatActivity
         startActivityForResult(in,101);
     }
 
+
+    //when user choose image from either camera or gallery then it is returned to this function
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent backdata)
     {
         super.onActivityResult(requestCode, resultCode, backdata);
-        if(requestCode == 100)
+        if(requestCode == 100)//returned from camera
         {
             if(resultCode == Activity.RESULT_OK)
             {
@@ -137,6 +142,7 @@ public class AddCategory extends AppCompatActivity
         }
     }
 
+    //this function is used to store category data to cloud
     public void submit(View v)
     {
         progressDialog = ProgressDialogClass.CreateProgressDialog(this,"Adding Category","Please Wait......");
@@ -265,6 +271,8 @@ public class AddCategory extends AppCompatActivity
         }
 
     }
+
+    //fumction name itself suggest its purpose
     public String getRealPathFromURI(Uri contentUri)
     {
         String[] proj = {MediaStore.Audio.Media.DATA};
@@ -274,7 +282,7 @@ public class AddCategory extends AppCompatActivity
         return cursor.getString(column_index);
     }
 
-
+//convert bitmap to uri
     public Uri getImageUri(Context inContext, Bitmap inImage)
     {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();

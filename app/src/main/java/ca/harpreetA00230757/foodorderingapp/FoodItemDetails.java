@@ -1,5 +1,5 @@
 package ca.harpreetA00230757.foodorderingapp;
-//
+// this class has declarations for all data members and member functions and getter setter for food items details
 
 public class FoodItemDetails
 {
