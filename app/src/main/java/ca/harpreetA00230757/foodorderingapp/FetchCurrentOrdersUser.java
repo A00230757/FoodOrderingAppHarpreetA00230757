@@ -109,7 +109,7 @@ public class FetchCurrentOrdersUser extends AppCompatActivity
         @Override
         public View getView(int i, View customView, ViewGroup parent) {
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-            customView = inflater.inflate(R.layout.single_row_design_of_order, parent, false);
+            customView = inflater.inflate(R.layout.single_row_design_of_order_user, parent, false);
 
             CustomerOrder obj = al_customerorder.get(i);
 

@@ -367,7 +367,7 @@ public class CartDetails extends AppCompatActivity implements PaymentResultListe
 
             JSONObject preFill = new JSONObject();
             preFill.put("email", "");
-            preFill.put("contact","+917009741717");
+            preFill.put("contact","+19052264147");
 
             options.put("prefill", preFill);
 

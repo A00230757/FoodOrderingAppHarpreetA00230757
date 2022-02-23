@@ -17,40 +17,51 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public void login(View v)
+//    public void login(View v)
+//    {
+//        Intent in = new Intent(this,ManageCategory.class);
+//        startActivity(in);
+//    }
+//    public void loginKitchen(View v)
+//    {
+//        Intent in = new Intent(this,ManageProducts.class);
+//        startActivity(in);
+//    }
+
+        public void login(View v)
     {
-        Intent in = new Intent(this,ManageCategory.class);
+        Intent in = new Intent(this,AdminHome.class);
         startActivity(in);
     }
     public void loginKitchen(View v)
     {
-        Intent in = new Intent(this,ManageProducts.class);
+        Intent in = new Intent(this,KitchenHome.class);
         startActivity(in);
     }
     public void shop(View v)
     {
-        Intent in = new Intent(this,ViewAllCategories.class);
+        Intent in = new Intent(this,HomeActivity.class);
         startActivity(in);
     }
-    public void viewadminorders(View v)
-    {
-        Intent in = new Intent(this,FetchUserAllOrders.class);
-        startActivity(in);
-    }
+//    public void viewadminorders(View v)
+//    {
+//        Intent in = new Intent(this,FetchUserAllOrders.class);
+//        startActivity(in);
+//    }
 
     public void viewuserorders(View v)
     {
         Intent in = new Intent(this,FetchAllOrdersUser.class);
         startActivity(in);
     }
-    public void viewcustomerreviews(View v)
-    {
-        Intent in = new Intent(this,View_CustomerReviews.class);
-        startActivity(in);
-    }
-    public void viewdailysale(View v)
-    {
-        Intent in = new Intent(this,ViewDailySale.class);
-        startActivity(in);
-    }
+//    public void viewcustomerreviews(View v)
+//    {
+//        Intent in = new Intent(this,View_CustomerReviews.class);
+//        startActivity(in);
+//    }
+//    public void viewdailysale(View v)
+//    {
+//        Intent in = new Intent(this,ViewDailySale.class);
+//        startActivity(in);
+//    }
 }

@@ -39,50 +39,50 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="loginKitchen"/>
+<!--    <Button-->
+<!--        android:id="@+id/bt_shop"-->
+<!--        android:textSize="22sp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:background="@drawable/button_style_selector"-->
+<!--        android:text="SHOP"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:onClick="shop"/>-->
     <Button
-        android:id="@+id/bt_shop"
+        android:id="@+id/shop"
         android:textSize="22sp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_style_selector"
-        android:text="SHOP"
+        android:text="CUSTOMER LOGIN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="shop"/>
-    <Button
-        android:id="@+id/bt_adminorders"
-        android:textSize="22sp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button_style_selector"
-        android:text="AdminOrders"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="viewadminorders"/>
-    <Button
-        android:id="@+id/bt_userorders"
-        android:textSize="22sp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button_style_selector"
-        android:text="UserOrders"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="viewuserorders"/>
-    <Button
-        android:id="@+id/bt_customerreviews"
-        android:textSize="22sp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button_style_selector"
-        android:text="CustomerReviews"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="viewcustomerreviews"/>
-    <Button
-    android:id="@+id/bt_dailysale"
-    android:textSize="22sp"
-    android:layout_marginTop="10dp"
-    android:background="@drawable/button_style_selector"
-    android:text="DailySale"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:onClick="viewdailysale"/>
+<!--    <Button-->
+<!--        android:id="@+id/bt_userorders"-->
+<!--        android:textSize="22sp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:background="@drawable/button_style_selector"-->
+<!--        android:text="UserOrders"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:onClick="viewuserorders"/>-->
+<!--    <Button-->
+<!--        android:id="@+id/bt_customerreviews"-->
+<!--        android:textSize="22sp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:background="@drawable/button_style_selector"-->
+<!--        android:text="CustomerReviews"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:onClick="viewcustomerreviews"/>-->
+<!--    <Button-->
+<!--    android:id="@+id/bt_dailysale"-->
+<!--    android:textSize="22sp"-->
+<!--    android:layout_marginTop="10dp"-->
+<!--    android:background="@drawable/button_style_selector"-->
+<!--    android:text="DailySale"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:onClick="viewdailysale"/>-->
 
 </LinearLayout>

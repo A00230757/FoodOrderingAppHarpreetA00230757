@@ -87,14 +87,14 @@
         </LinearLayout>
 
 
-        <!--       <Button-->
-        <!--           android:id="@+id/bt_review"-->
-        <!--           android:layout_width="131dp"-->
-        <!--           android:layout_height="wrap_content"-->
-        <!--           android:layout_marginLeft="218dp"-->
-        <!--           android:layout_marginRight="15dp"-->
-        <!--           android:text="Review"-->
-        <!--           android:textSize="18sp" />-->
+<!--               <Button-->
+<!--                   android:id="@+id/bt_review"-->
+<!--                   android:layout_width="131dp"-->
+<!--                   android:layout_height="wrap_content"-->
+<!--                   android:layout_marginLeft="218dp"-->
+<!--                   android:layout_marginRight="15dp"-->
+<!--                   android:text="Review"-->
+<!--                   android:textSize="18sp" />-->
 
 
 
