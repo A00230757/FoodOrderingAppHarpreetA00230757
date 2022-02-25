@@ -14,7 +14,10 @@
         android:roundIcon="@drawable/appicon1"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodOrderingAppHarpreetA00230757">
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".UserLogin"></activity>
+        <activity android:name=".KitchenLogin" />
+        <activity android:name=".AdminLogin" />
+        <activity android:name=".HomeActivity" />
         <activity android:name=".AdminHome" />
         <activity android:name=".ViewDailySale" />
         <activity android:name=".View_CustomerReviews" />

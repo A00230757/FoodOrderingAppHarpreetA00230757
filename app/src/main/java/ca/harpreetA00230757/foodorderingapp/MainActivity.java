@@ -30,17 +30,17 @@ public class MainActivity extends AppCompatActivity
 
         public void login(View v)
     {
-        Intent in = new Intent(this,AdminHome.class);
+        Intent in = new Intent(this,AdminLogin.class);
         startActivity(in);
     }
     public void loginKitchen(View v)
     {
-        Intent in = new Intent(this,KitchenHome.class);
+        Intent in = new Intent(this,KitchenLogin.class);
         startActivity(in);
     }
     public void shop(View v)
     {
-        Intent in = new Intent(this,HomeActivity.class);
+        Intent in = new Intent(this,UserLogin.class);
         startActivity(in);
     }
 //    public void viewadminorders(View v)

@@ -13,7 +13,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ADMIN AND KITCHEN "
+        android:text="DIGITAL FOOD ORDERING"
         android:textStyle="bold"
         android:layout_marginTop="200dp"
         android:textSize="50sp"
